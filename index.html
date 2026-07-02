@@ -1,40 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This page is the login page for the user to log in or sign up.">
-    <title>User Paradise</title>
-<link rel="preconnect" href="https://menu.html">
-<link rel="preconnect" href="https://color.html">
-<link rel="preconnect" href="https://contacts.html">
-<link rel="preconnect" href="https://SignUp.html">
-    <script type="text/javascript" src="js/md5.js"></script>
-    <script type="text/javascript" src="js/code.js"></script>
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NutriPlan helps you find healthy, nourishing recipes tailored to your budget, diet, and goals. Take a 3-minute survey and get a personalized meal plan.">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<title>NutriPlan &mdash; Personalized Healthy Recipes</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <h1 id="UserParadise">User Paradise</h1>
+  <!-- ===== TOP NAV ===== -->
+  <header class="topnav">
+    <button class="search-link" id="searchToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="searchOverlay">
+      <span class="icon" aria-hidden="true">&#128269;</span> Search Recipes
+    </button>
 
-    <div id="LoginDiv">
-        <span id="inner-title">PLEASE LOGIN</span>
-        <input type="text" id="loginName" placeholder="Username"/><br />
-        <input type="password" id="loginPassword" placeholder="Password"/><br/>
-        <button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Login </button>
-        <span id="loginResult"></span>
+    <nav class="top-links">
+      <a href="#mission">Our Mission</a>
+      <a href="#faq">FAQ</a>
+      <a href="#help">Help</a>
+      <button class="categories-link-mobile" id="categoriesToggleMobile" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="categoriesDrawer">Categories</button>
+    </nav>
+  </header>
+
+  <!-- ===== SEARCH OVERLAY (hidden until toggled) ===== -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
+    <form class="search-box" id="searchForm">
+      <label class="sr-only" id="searchLabel" for="searchInput">Search recipes</label>
+      <input type="text" id="searchInput" name="q" placeholder="Search recipes, ingredients, cuisines..." autocomplete="off">
+      <button type="submit">Search</button>
+      <button type="button" class="close-btn" id="searchClose" aria-label="Close search">&times;</button>
+    </form>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section class="hero">
+      <img class="hero-decor hero-decor--left"
+           src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=300&amp;h=300&amp;fit=crop&amp;auto=format&amp;q=80"
+           alt="" aria-hidden="true" loading="lazy" width="110" height="110">
+      <img class="hero-decor hero-decor--right"
+           src="https://images.unsplash.com/photo-1565958000543-9dec3484c2f5?w=300&amp;h=300&amp;fit=crop&amp;auto=format&amp;q=80"
+           alt="" aria-hidden="true" loading="lazy" width="110" height="110">
+
+      <h1 class="logo">NutriPlan</h1>
+      <p class="tagline">
+        Welcome! Our mission is committed to bring every person healthy
+        and nourishing recipes that cater to your needs.
+      </p>
+      <p class="cta-copy">
+        Take our survey to get your personalized meal recommendations
+        in under three minutes! No sign up needed!
+      </p>
+
+      <button class="get-started" id="getStartedBtn" type="button">Get Started</button>
+
+      <!-- ===== STEPS ===== -->
+      <h2 class="sr-only">How NutriPlan Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Step 1</h3>
+          <p>Complete the Survey!</p>
+        </div>
+        <div class="step">
+          <h3>Step 2</h3>
+          <p>View your Recommendations</p>
+        </div>
+        <div class="step">
+          <h3>Step 3</h3>
+          <p>Bring Recipes to Fruition!</p>
+        </div>
+      </div>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <h2 class="sr-only">What People Are Saying</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>&ldquo;Healthy eating is really important, and everyone should
+          definitely look into it&hellip;It's not that difficult, it's not
+          that expensive, it doesn't require a complete life change.&rdquo;</p>
+          <cite>&mdash; Vegetarian Resident from Florida</cite>
+        </blockquote>
+        <blockquote>
+          <p>&ldquo;A lot of people already have the foods they want to eat;
+          they just need to know how to balance them nutritionally.&rdquo;</p>
+          <cite>&mdash; Neuroscience College Student from Arizona</cite>
+        </blockquote>
+      </div>
+
+      <!-- ===== CATEGORIES TAB (desktop pull tab; hidden on mobile in favor of nav link) ===== -->
+      <button class="categories-tab" id="categoriesToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="categoriesDrawer">Categories</button>
+    </section>
+
+    <!-- ===== FOOD STRIP ===== -->
+    <div class="food-strip" role="img" aria-label="Assortment of fresh vegetables and fruits"></div>
+  </main>
+
+  <!-- ===== CATEGORIES DRAWER ===== -->
+  <aside class="categories-drawer" id="categoriesDrawer" role="dialog" aria-modal="true" aria-labelledby="categoriesHeading">
+    <button class="drawer-close" id="categoriesClose" type="button" aria-label="Close categories">&times;</button>
+    <h2 id="categoriesHeading">Categories</h2>
+
+    <div class="filter-group">
+      <h3>Meal Type</h3>
+      <label><input type="checkbox" name="mealType" value="vegan"> Vegan</label>
+      <label><input type="checkbox" name="mealType" value="vegetarian"> Vegetarian</label>
+      <label><input type="checkbox" name="mealType" value="nonveg"> Non-Vegetarian</label>
+      <label><input type="checkbox" name="mealType" value="halal"> Halal</label>
     </div>
 
-    <div id="SignupDiv">
-        <h1 id="SignUp">No account? Sign Up!</h1>
-        <button type="button" id="signupButton" class="buttons" onclick="doSignup();"> Sign Up </button>
-        <span id="loginResult"></span>
-          
+    <div class="filter-group">
+      <h3>Budget</h3>
+      <label><input type="checkbox" name="budget" value="15"> Under $15</label>
+      <label><input type="checkbox" name="budget" value="15-30"> $15-30</label>
+      <label><input type="checkbox" name="budget" value="30plus"> $30 and above</label>
     </div>
 
+    <div class="filter-group">
+      <h3>Ingredient</h3>
+      <div class="ingredient-toggle">
+        <label><input type="radio" name="ingMode" value="include" checked> Include</label>
+        <label><input type="radio" name="ingMode" value="exclude"> Exclude</label>
+      </div>
+      <label><input type="checkbox" name="ingredient" value="apples"> Apples</label>
+      <label><input type="checkbox" name="ingredient" value="blueberries"> Blueberries</label>
+      <label><input type="checkbox" name="ingredient" value="carrots"> Carrots</label>
+      <label><input type="checkbox" name="ingredient" value="eggs"> Eggs</label>
+    </div>
+
+    <button class="apply-filters" id="applyFilters" type="button">Apply Filters</button>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <script src="js/home.js"></script>
 </body>
-
 </html>
