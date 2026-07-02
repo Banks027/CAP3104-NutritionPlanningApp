@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> b42e6e5cbdde0aa879ed8f412dbd6b1dc66640d8
 function addFood() {
     let newFood = document.getElementById("foodText").value;
     document.getElementById("foodAddResult").innerHTML = "";

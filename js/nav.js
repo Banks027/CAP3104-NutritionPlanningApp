@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 setupConfig();
 
+=======
+>>>>>>> b42e6e5cbdde0aa879ed8f412dbd6b1dc66640d8
 // Simply navigating the page
 
 function foodMenu() {
@@ -19,6 +22,9 @@ function goBack() {
     window.location.href = "menu.html";
 }
  
+<<<<<<< HEAD
 function doSignup() { // takes user to sign up page
     window.location.href = "SignUp.html";
 }
+=======
+>>>>>>> b42e6e5cbdde0aa879ed8f412dbd6b1dc66640d8

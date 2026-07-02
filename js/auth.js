@@ -1,8 +1,11 @@
 // Login sign up and logout
+<<<<<<< HEAD
 // Login sign up and logout
 
 setupConfig();
 
+=======
+>>>>>>> b42e6e5cbdde0aa879ed8f412dbd6b1dc66640d8
 
 function doLogin() {
     let login = document.getElementById("loginName").value;
