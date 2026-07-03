@@ -7,6 +7,8 @@
 <link rel="icon" href="images/favicon.ico" sizes="any">
 <title>NutriPlan &mdash; Personalized Healthy Recipes</title>
 <link rel="stylesheet" href="css/style.css">
+<script type="module" src="config.js"></script>
+<script type="module" src="Food.js"></script>
 </head>
 <body>
 
@@ -17,9 +19,10 @@
     </button>
 
     <nav class="top-links">
-      <a href="#mission">Our Mission</a>
-      <a href="#faq">FAQ</a>
-      <a href="#help">Help</a>
+      <a href="/html/mission.html">Our Mission</a>
+      <a href="/html/faq.html">FAQ</a>
+      <a href="/html/help.html">Help</a>
+
       <button class="categories-link-mobile" id="categoriesToggleMobile" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="categoriesDrawer">Categories</button>
     </nav>
   </header>
@@ -104,10 +107,17 @@
 
     <div class="filter-group">
       <h3>Meal Type</h3>
-      <label><input type="checkbox" name="mealType" value="vegan"> Vegan</label>
-      <label><input type="checkbox" name="mealType" value="vegetarian"> Vegetarian</label>
-      <label><input type="checkbox" name="mealType" value="nonveg"> Non-Vegetarian</label>
-      <label><input type="checkbox" name="mealType" value="halal"> Halal</label>
+     <!-- Vegan | DairyFree | GlutenFree | Garlic | Caffeine | Halal | Kosher | Vegetarian | MealCost -->
+
+      <label><input type="checkbox" name="mealType" value="Vegan"> Vegan</label>
+      <label><input type="checkbox" name="mealType" value="Dairy Free"> Dairy-Free</label>
+      <label><input type="checkbox" name="mealType" value="GlutenFree"> Gluten-Free</label>
+      <label><input type="checkbox" name="mealType" value="Garlic Free"> Garlic</label>
+      <label><input type="checkbox" name="mealType" value="Caffeine Free"> Caffeine</label>
+      <label><input type="checkbox" name="mealType" value="Halal"> Halal</label>
+      <label><input type="checkbox" name="mealType" value="Kosher"> Kosher</label>
+      <label><input type="checkbox" name="mealType" value="Vegetarian"> Vegetarian</label>
+     
     </div>
 
     <div class="filter-group">
@@ -133,6 +143,6 @@
   </aside>
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-  <script src="js/home.js"></script>
+  <script src="js/home.js"></script> /*make this another script name: js/Food.js */
 </body>
 </html>
