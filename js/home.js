@@ -1,4 +1,6 @@
-setupConfig();
+if (typeof setupConfig === 'function') {
+  setupConfig();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -7,7 +7,7 @@
 <link rel="icon" href="images/favicon.ico" sizes="any">
 <title>NutriPlan &mdash; Personalized Healthy Recipes</title>
 <link rel="stylesheet" href="css/style.css">
-<script src="config.js"></script>
+<script src="js/config.js"></script>
 <script src="js/home.js"></script>
 </head>
 <body>
@@ -22,7 +22,18 @@
       <a href="/html/mission.html">Our Mission</a>
       <a href="/html/faq.html">FAQ</a>
       <a href="/html/help.html">Help</a>
+      
 
+      <!-- Hidden Login Box -->
+      <div class="login-box">
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+        <a href="/html/SignUp.html" id="">MakeAccount</a>
       <button class="categories-link-mobile" id="categoriesToggleMobile" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="categoriesDrawer">Categories</button>
     </nav>
   </header>
@@ -34,6 +45,11 @@
       <input type="text" id="searchInput" name="q" placeholder="Search recipes, ingredients, cuisines..." autocomplete="off">
       <button type="submit">Search</button>
       <button type="button" class="close-btn" id="searchClose" aria-label="Close search">&times;</button>
+    
+    
+    
+    
+    
     </form>
   </div>
 

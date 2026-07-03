@@ -73,6 +73,37 @@ body.no-scroll { overflow: hidden; }
 }
 .top-links a:hover { text-decoration: underline; }
 
+.login-box {
+    display: flex;
+    align-items: center;
+}
+
+.login-box form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.login-box input {
+    width: 115px;
+    padding: 6px 8px;
+    border: 1px solid #c9c1b3;
+    border-radius: var(--radius);
+    font-size: 0.82rem;
+}
+
+.login-box button[type="submit"] {
+    padding: 6px 12px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--maroon);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .categories-link-mobile {
   display: none;
   background: var(--maroon);
@@ -335,10 +366,10 @@ body.no-scroll { overflow: hidden; }
     color: #FFFAFA;
 }
 
-#LoginDiv
+#LoginDiv 
 {
-    font-size: 30px;
-    width: 70%;
+    font-size: 20px;
+    width: 0%;
     margin-left: 15%;
     padding: 25px;
     background-color:#f95959;
@@ -512,10 +543,10 @@ font-size: 30px;
 }
 
 input[type="text"],input[type="password"]{
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
-    width: 80%;
-        height: 55px;
+    width: 40%;
+        height: 40px;
         font-size: 22px;
         padding: 0 15px;
     margin-left: 10%;

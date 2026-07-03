@@ -1,3 +1,5 @@
+setupConfig();
+
 function addFood() {
     let newFood = document.getElementById("foodText").value;
     document.getElementById("foodAddResult").innerHTML = "";
