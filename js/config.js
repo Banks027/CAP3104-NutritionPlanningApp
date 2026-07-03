@@ -1,5 +1,11 @@
-let LastName = "";
-let currentContact = null; //temp contact
+var urlBase = window.urlBase || 'https://lampsxyz.online/LAMPAPI';
+var extension = window.extension || 'php';
+var userId = window.userId || 0;
+var FirstName = window.FirstName || "";
+var LastName = window.LastName || "";
+var currentContact = window.currentContact || null;
+var currentFood = window.currentFood || null;
+
 // Shared globals for the browser scripts.
 function setupConfig() {
 	if (window.__nutritionAppGlobalsReady) {
@@ -7,14 +13,15 @@ function setupConfig() {
 	}
 
 	window.__nutritionAppGlobalsReady = true;
-	window.urlBase = window.urlBase || 'https://lampsxyz.online/LAMPAPI';
-	window.extension = window.extension || 'php';
-	window.userId = window.userId || 0;
-	window.FirstName = window.FirstName || "";
-	window.LastName = window.LastName || "";
-	window.currentContact = window.currentContact || null;
-	window.currentFood = window.currentFood || null;
+	window.urlBase = urlBase;
+	window.extension = extension;
+	window.userId = userId;
+	window.FirstName = FirstName;
+	window.LastName = LastName;
+	window.currentContact = currentContact;
+	window.currentFood = currentFood;
 }
 
-const SetupConfig = setupConfig;
-const setupNutritionAppGlobals = setupConfig;
+window.setupConfig = setupConfig;
+window.SetupConfig = setupConfig;
+window.setupNutritionAppGlobals = setupConfig;
