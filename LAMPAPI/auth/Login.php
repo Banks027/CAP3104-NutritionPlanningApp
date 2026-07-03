@@ -10,12 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 */
 
 	$inData = getRequestInfo();
+	if (!is_array($inData))
+	{
+		returnWithError("Invalid JSON payload");
+	}
 	
 	$ID = 0;
 	$FirstName = "";
 	$LastName = "";
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331"); 	
+	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "Nutrition");
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );
@@ -23,15 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 	else
 	{
 		$stmt = $conn->prepare("SELECT ID,FirstName,LastName FROM Users WHERE Login=? AND BINARY Password =?");
+		if (!$stmt)
+		{
+			$conn->close();
+			returnWithError($conn->error);
+			exit();
+		}
 		$loginValue = isset($inData["Login"]) ? $inData["Login"] : (isset($inData["login"]) ? $inData["login"] : "");
 		$passwordValue = isset($inData["Password"]) ? $inData["Password"] : (isset($inData["password"]) ? $inData["password"] : "");
+		if ($loginValue === "" || $passwordValue === "")
+		{
+			$conn->close();
+			returnWithError("Missing login or password");
+		}
 		$stmt->bind_param("ss", $loginValue, $passwordValue);
 		$stmt->execute();
-		$result = $stmt->get_result();
+		$stmt->bind_result($ID, $FirstName, $LastName);
 
-		if( $row = $result->fetch_assoc()  )
+		if ($stmt->fetch())
 		{
-			returnWithInfo( $row['FirstName'], $row['LastName'], $row['ID'] );
+			returnWithInfo($FirstName, $LastName, $ID);
 		}
 		else
 		{
@@ -55,13 +70,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"id":0,"FirstName":"","LastName":"","error":"' . $err . '"}';
+		$retValue = json_encode(array("id" => 0, "FirstName" => "", "LastName" => "", "error" => $err));
 		sendResultInfoAsJson( $retValue );
+		exit();
 	}
 	
 	function returnWithInfo( $FirstName, $LastName, $ID )
 	{
-		$retValue = '{"id":' . $ID . ',"FirstName":"' . $FirstName . '","LastName":"' . $LastName . '","error":""}';
+		$retValue = json_encode(array("id" => $ID, "FirstName" => $FirstName, "LastName" => $LastName, "error" => ""));
 		sendResultInfoAsJson( $retValue );
 	}
 	
