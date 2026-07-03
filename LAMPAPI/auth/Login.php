@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 			returnWithError($conn->error);
 			exit();
 		}
-
 		$loginValue = isset($inData["Login"]) ? $inData["Login"] : (isset($inData["login"]) ? $inData["login"] : "");
 		$passwordValue = isset($inData["Password"]) ? $inData["Password"] : (isset($inData["password"]) ? $inData["password"] : "");
 		if ($loginValue === "" || $passwordValue === "")
