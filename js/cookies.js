@@ -1,11 +1,8 @@
 //Yum yum cookies but overall the save and read of the login session
 
-<<<<<<< HEAD
 setupConfig();
 //Yum yum cookies but overall the save and read of the login session
 
-=======
->>>>>>> b42e6e5cbdde0aa879ed8f412dbd6b1dc66640d8
 function saveCookie() {
     let minutes = 20;
     let date = new Date();
