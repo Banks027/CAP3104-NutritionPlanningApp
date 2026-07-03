@@ -1,8 +1,14 @@
 // Login sign up and logout
 // Login sign up and logout
 
-setupConfig();
-
+/* setupConfig(); */
+var urlBase = window.urlBase || 'https://lampsxyz.online/LAMPAPI';
+var extension = window.extension || 'php';
+var userId = window.userId || 0;
+var FirstName = window.FirstName || "";
+var LastName = window.LastName || "";
+var currentContact = window.currentContact || null;
+var currentFood = window.currentFood || null;
 
 function doLogin() {
     let login = document.getElementById("loginName").value;
@@ -33,7 +39,7 @@ function doLogin() {
                 FirstName = jsonObject.FirstName;
                 LastName = jsonObject.LastName;
                 saveCookie();
-                window.location.href = "menu.html";
+                window.location.href = "/html/menu.html";
             }
         };
         xhr.send(jsonPayload);
