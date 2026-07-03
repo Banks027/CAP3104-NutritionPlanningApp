@@ -5,20 +5,20 @@
 	$searchResults = "";
 	$searchCount = 0;
 
-	$conn = new mysqli("Nutrition");
+	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "Nutrition");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$colorName = "%" . $inData["search"] . "%";
-		$stmt = $conn->prepare("SELECT Name FROM Colors WHERE Name LIKE ? AND UserID = ?");
+		$FoodName = "%" . $inData["search"] . "%";
+		$stmt = $conn->prepare("SELECT Name FROM Food WHERE Name LIKE ? AND UserID = ?");
 		if (!$stmt) {
 			returnWithError($conn->error);
 			exit();
 		}
-		$stmt->bind_param("si", $colorName, $inData["userId"]);
+		$stmt->bind_param("si", $FoodName, $inData["userId"]);
 		$stmt->execute();
 		$result = $stmt->get_result();
 		
@@ -29,7 +29,7 @@
 				$searchResults .= ",";
 			}
 			$searchCount++;
-			$searchResults .= '{"Colors":"' . $row["Name"] . '"}';
+			$searchResults .= '{"Foods":"' . $row["Name"] . '"}';
 		}
 		
 		if( $searchCount == 0 )
