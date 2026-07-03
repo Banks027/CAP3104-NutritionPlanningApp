@@ -10,12 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 */
 
 	$inData = getRequestInfo();
+	if (!is_array($inData))
+	{
+		returnWithError("Invalid JSON payload");
+	}
 	
 	$ID = 0;
 	$FirstName = "";
 	$LastName = "";
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "Nutrition");
+	$conn = new mysqli("localhost", "TheBeast", "WeLoveCAP3104", "Nutrition");
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );
@@ -29,8 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 			returnWithError($conn->error);
 			exit();
 		}
+
 		$loginValue = isset($inData["Login"]) ? $inData["Login"] : (isset($inData["login"]) ? $inData["login"] : "");
 		$passwordValue = isset($inData["Password"]) ? $inData["Password"] : (isset($inData["password"]) ? $inData["password"] : "");
+		if ($loginValue === "" || $passwordValue === "")
+		{
+			$conn->close();
+			returnWithError("Missing login or password");
+		}
 		$stmt->bind_param("ss", $loginValue, $passwordValue);
 		$stmt->execute();
 		$stmt->bind_result($ID, $FirstName, $LastName);
@@ -61,14 +71,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"id":0,"FirstName":"","LastName":"","error":"' . $err . '"}';
+		$retValue = json_encode(array("id" => 0, "FirstName" => "", "LastName" => "", "error" => $err));
 		sendResultInfoAsJson( $retValue );
 		exit();
 	}
 	
 	function returnWithInfo( $FirstName, $LastName, $ID )
 	{
-		$retValue = '{"id":' . $ID . ',"FirstName":"' . $FirstName . '","LastName":"' . $LastName . '","error":""}';
+		$retValue = json_encode(array("id" => $ID, "FirstName" => $FirstName, "LastName" => $LastName, "error" => ""));
 		sendResultInfoAsJson( $retValue );
 	}
 	

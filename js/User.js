@@ -1,3 +1,10 @@
+var urlBase = window.urlBase || 'https://lampsxyz.online/LAMPAPI';
+var extension = window.extension || 'php';
+var userId = window.userId || 0;
+var FirstName = window.FirstName || "";
+var LastName = window.LastName || "";
+var currentContact = window.currentContact || null;
+var currentFood = window.currentFood || null;
 
 setupConfig();
 

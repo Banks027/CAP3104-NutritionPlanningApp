@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     $Login = $inData["Login"]; //Represents the user that is adding the color, this is used to make sure the color is added to the correct user
     $Password = $inData["Password"];
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
+	$conn = new mysqli("localhost", "TheBeast", "WeLoveCAP3104", "Nutrition");
+	
 	if ($conn->connect_error) 
 	{
 		returnWithError($conn->connect_error);
