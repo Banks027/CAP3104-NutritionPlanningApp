@@ -12,7 +12,7 @@ function saveCookie() {
     document.cookie = "lastName=" + LastName + expires;
     document.cookie = "userId=" + userId + expires;
 }
- 
+ globalThis.saveCookie =saveCookie;
 function readCookie() {
     userId = -1;
     let data = document.cookie;
@@ -41,3 +41,4 @@ function readCookie() {
     }
 }
  
+ globalThis.readCookie =readCookie;
