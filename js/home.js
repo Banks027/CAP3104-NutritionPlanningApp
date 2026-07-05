@@ -104,14 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // TODO: this page doesn't exist yet. Point at the real onboarding survey once it's built
     // (NFR2 flow: Budget -> Time available -> Dietary restrictions -> Nutrition goals -> main screen).
     // Placed flat at repo root to match how SignUp.html/menu.html are referenced elsewhere in auth.js/nav.js.
-    window.location.href = 'survey.html';
+    window.location.href = '/html/survey.html';
   });
 
     document.getElementById('getStartedBtn').addEventListener('click', () => {
     // TODO: this page doesn't exist yet. Point at the real onboarding survey once it's built
     // (NFR2 flow: Budget -> Time available -> Dietary restrictions -> Nutrition goals -> main screen).
     // Placed flat at repo root to match how SignUp.html/menu.html are referenced elsewhere in auth.js/nav.js.
-    window.location.href = 'survey.html';
+    window.location.href = '/html/survey.html';
   });
   
 });
