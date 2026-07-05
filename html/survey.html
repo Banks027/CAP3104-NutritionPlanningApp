@@ -13,3 +13,151 @@
 
 	
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take our quick survey to get personalized meal recommendations">
+    <title>Survey</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html" class="header-link">&larr; Back to Home</a>
+</div>
+
+<div class="survey-page">
+  <div class="survey-card">
+
+    <div id="surveyFormWrapper">
+      <h1 class="survey-title">Let's Personalize Your Plan</h1>
+      <p class="survey-subtitle">Answer a few quick questions — no account needed.</p>
+
+      <form id="surveyForm" class="survey-form">
+
+        <!-- GOAL -->
+        <div class="survey-section">
+          <h2>What's your main goal?</h2>
+          <div class="survey-options">
+            <label class="survey-option">
+              <input type="radio" name="goal" value="weightLoss" required>
+              Weight Loss
+            </label>
+            <label class="survey-option">
+              <input type="radio" name="goal" value="muscleGain">
+              Muscle Gain
+            </label>
+            <label class="survey-option">
+              <input type="radio" name="goal" value="maintain">
+              Maintain Weight
+            </label>
+            <label class="survey-option">
+              <input type="radio" name="goal" value="generalHealth">
+              General Health
+            </label>
+          </div>
+        </div>
+
+        <!-- DIETARY RESTRICTIONS -->
+        <div class="survey-section">
+          <h2>Any dietary restrictions?</h2>
+          <div class="survey-options">
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="vegetarian">
+              Vegetarian
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="vegan">
+              Vegan
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="glutenFree">
+              Gluten-Free
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="dairyFree">
+              Dairy-Free
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="nutAllergy">
+              Nut Allergy
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="restrictions" value="none" id="noneRestriction">
+              None
+            </label>
+          </div>
+        </div>
+
+        <!-- FOOD PREFERENCES -->
+        <div class="survey-section">
+          <h2>What cuisines do you enjoy?</h2>
+          <div class="survey-options">
+            <label class="survey-option">
+              <input type="checkbox" name="cuisines" value="american">
+              American
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="cuisines" value="mexican">
+              Mexican
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="cuisines" value="italian">
+              Italian
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="cuisines" value="asian">
+              Asian
+            </label>
+            <label class="survey-option">
+              <input type="checkbox" name="cuisines" value="mediterranean">
+              Mediterranean
+            </label>
+          </div>
+        </div>
+
+        <!-- DISLIKES -->
+        <div class="survey-section">
+          <h2>Any foods you'd like to avoid?</h2>
+          <textarea name="dislikes" class="survey-textarea" placeholder="e.g. mushrooms, seafood, cilantro..."></textarea>
+        </div>
+
+        <!-- BUDGET -->
+        <div class="survey-section">
+          <h2>What's your budget per meal?</h2>
+          <div class="survey-options">
+            <label class="survey-option">
+              <input type="radio" name="budget" value="under5" required>
+              Under $5
+            </label>
+            <label class="survey-option">
+              <input type="radio" name="budget" value="5to10">
+              $5 - $10
+            </label>
+            <label class="survey-option">
+              <input type="radio" name="budget" value="over10">
+              Over $10
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="survey-submit">Get My Recommendations</button>
+      </form>
+    </div>
+
+    <!-- SHOWN AFTER SUBMIT -->
+    <div id="surveyResult" class="survey-result" style="display: none;">
+      <h1 class="survey-title">You're all set!</h1>
+      <p class="survey-subtitle" id="surveyResultText"></p>
+      <a href="../index.html" class="survey-submit-link">Back to Home</a>
+    </div>
+
+  </div>
+</div>
+
+<script src="../js/survey.js" defer></script>
+</body>
+</html>
