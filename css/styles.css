@@ -366,7 +366,7 @@ body.no-scroll { overflow: hidden; }
     color: #FFFAFA;
 }
 
-#LoginDiv 
+#LoginDiv
 {
     font-size: 20px;
     width: 0%;
@@ -971,11 +971,11 @@ select{
         padding: 15px;
         padding-bottom: 80px;
     }
-    
+
     #dashboard .nutrition-stat {
         font-size: 13px;
     }
-    
+
     #dashboard .meal-card {
         padding: 10px 12px;
     }
@@ -1189,3 +1189,66 @@ select{
   }
 }
 /* ===== END OF SURVEY PAGE ===== */
+<<<<<<< HEAD
+
+
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (min-width: 1024px) {
+    #dashboard .nutrition-card,
+    #dashboard .meal-card,
+    #dashboard .suggestion-card {
+        padding: 20px 24px;
+        font-size: 15px;
+    }
+
+    #dashboard .nutrition-card h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    #dashboard .meal-card .meal-name {
+        font-size: 17px;
+    }
+
+    #dashboard .meal-card .meal-calories {
+        font-size: 15px;
+    }
+
+    #dashboard .quick-add-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #dashboard .quick-add-btn {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    #dashboard .week-days {
+        gap: 12px;
+    }
+
+    #dashboard .week-day {
+        padding: 12px 6px;
+        font-size: 14px;
+    }
+}
+/* ===== END OF RESPONSIVE LAYOUT ===== */
+
+/* ==== LOG OUT BUTTON FIX ONLY ON DASHBOARD ==== */
+#dashboard .logout-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#dashboard #logoutButton {
+    width: 100%;
+    max-width: 240px;
+    height: 48px;
+    margin: 0;
+    font-size: 16px;
+    border-radius: 10px;
+}
+/* ==== END LOG OUT BUTTON FIX ONLY ON DASHBOARD ==== */
+=======
+>>>>>>> 60be9936a1cf09e6ab6337468e0fbd61ee74d138

@@ -1,16 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="This page is the sign up page for the user to create an account.">
-	<title>User Paradise</title>
-	<script type="text/javascript" src="js/User.js"></script>
-	<script type="text/javascript" src="js/md5.js"></script>
-    <script src="..js/auth.js"></script>
-    <link href="css/styles.css" rel="stylesheet">	
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take our quick survey to get personalized meal recommendations">
+  <title>Survey</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="../js/config.js"></script>
+  <script src="../js/survey.js" defer></script>
+</head>
+<body>
+  <div class="topnav">
+    <a href="../index.html" class="header-link">&larr; Back to Home</a>
+  </div>
 
+  <div class="survey-page">
+    <div class="survey-card">
+      <div id="surveyFormWrapper">
+        <h1 class="survey-title">Let's Personalize Your Plan</h1>
+        <p class="survey-subtitle">Answer a few quick questions — no account needed.</p>
+        <p id="surveyMessage" class="survey-message" aria-live="polite"></p>
 
+<<<<<<< HEAD
+        <form id="surveyForm" class="survey-form" method="post" action="../LAMPAPI/SurveyData/AddInfo.php">
+          <div class="survey-section">
+            <h2>What's your main goal?</h2>
+            <div class="survey-options">
+              <label class="survey-option">
+                <input type="radio" name="goal" value="weightLoss" required>
+                Weight Loss
+              </label>
+              <label class="survey-option">
+                <input type="radio" name="goal" value="muscleGain">
+                Muscle Gain
+              </label>
+              <label class="survey-option">
+                <input type="radio" name="goal" value="maintain">
+                Maintain Weight
+              </label>
+              <label class="survey-option">
+                <input type="radio" name="goal" value="generalHealth">
+                General Health
+              </label>
+            </div>
+          </div>
+
+          <div class="survey-section">
+            <h2>Any dietary restrictions?</h2>
+            <div class="survey-options">
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="vegetarian">
+                Vegetarian
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="vegan">
+                Vegan
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="glutenFree">
+                Gluten-Free
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="dairyFree">
+                Dairy-Free
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="nutAllergy">
+                Nut Allergy
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="restrictions" value="none" id="noneRestriction">
+                None
+              </label>
+            </div>
+          </div>
+
+          <div class="survey-section">
+            <h2>What cuisines do you enjoy?</h2>
+            <div class="survey-options">
+              <label class="survey-option">
+                <input type="checkbox" name="cuisines" value="american">
+                American
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="cuisines" value="mexican">
+                Mexican
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="cuisines" value="italian">
+                Italian
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="cuisines" value="asian">
+                Asian
+              </label>
+              <label class="survey-option">
+                <input type="checkbox" name="cuisines" value="mediterranean">
+                Mediterranean
+              </label>
+            </div>
+          </div>
+
+          <div class="survey-section">
+            <h2>Any foods you'd like to avoid?</h2>
+            <textarea name="dislikes" class="survey-textarea" placeholder="e.g. mushrooms, seafood, cilantro..."></textarea>
+          </div>
+
+          <div class="survey-section">
+            <h2>What's your budget per meal?</h2>
+            <div class="survey-options">
+              <label class="survey-option">
+                <input type="radio" name="budget" value="under5" required>
+                Under $5
+              </label>
+              <label class="survey-option">
+                <input type="radio" name="budget" value="5to10">
+                $5 - $10
+              </label>
+              <label class="survey-option">
+                <input type="radio" name="budget" value="over10">
+                Over $10
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="survey-submit">Get My Recommendations</button>
+        </form>
+      </div>
+
+      <div id="surveyResult" class="survey-result" style="display: none;">
+        <h1 class="survey-title">Thank you for your responce.</h1>
+        <p class="survey-subtitle" id="surveyResultText">Would you like to sign up?</p>
+        <a id="signupButton" class="survey-submit-link" href="SignUp.html" style="display: none;">Sign Up</a>
+      </div>
+    </div>
+  </div>
+=======
 	
 </head>
 <!DOCTYPE html>
@@ -159,5 +285,6 @@
 </div>
 
 <script src="../js/survey.js" defer></script>
+>>>>>>> 60be9936a1cf09e6ab6337468e0fbd61ee74d138
 </body>
 </html>

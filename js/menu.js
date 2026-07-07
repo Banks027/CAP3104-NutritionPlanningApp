@@ -252,5 +252,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("navProfile")?.addEventListener("click", goToProfile);
         document.getElementById("logoutButton")?.addEventListener("click", doLogout);
     }
+    
+    
+    
     // Existing pages (login, signup, contacts, colors) continue to work as before
+    
+    
+     document.getElementById('logoutButton').addEventListener('click', () => {
+    // TODO: this page doesn't exist yet. Point at the real onboarding survey once it's built
+    // (NFR2 flow: Budget -> Time available -> Dietary restrictions -> Nutrition goals -> main screen).
+    // Placed flat at repo root to match how SignUp.html/menu.html are referenced elsewhere in auth.js/nav.js.
+    window.location.href = '../index.html';
+    });
 });
