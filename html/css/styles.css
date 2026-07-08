@@ -133,6 +133,7 @@ body.no-scroll { overflow: hidden; }
   padding: 20px;
   border-radius: var(--radius);
   display: flex;
+  flex-direction: column;
   gap: 10px;
   width: min(500px, 90vw);
 }
