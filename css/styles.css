@@ -163,7 +163,7 @@ body.no-scroll { overflow: hidden; }
 .hero {
   position: relative;
   background: linear-gradient(180deg, var(--green-light) 0%, var(--green-mid) 100%);
-  text-align: center;
+  text-align: left;
   padding: 60px 90px 40px;
   overflow: hidden;
 }
@@ -376,22 +376,43 @@ body.no-scroll { overflow: hidden; }
 }
 
 
-#SignupDiv
+/*#SignupDiv
 {
     font-size: 30px;
     width: 70%;
     margin-left: 15%;
     padding: 25px;
+     background-color:#f95959; 
+} */
+
+
+#signup, { /*used for all buttons in signup window*/
+font-size: 30px;
+    width: 70%;
+    margin-right: 40%;
+    padding: 25px;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Pushes content to edges */
+  align-items: center;            /* Centers items vertically */
+  width: 100%;
     /* background-color:#f95959; */
+
+}
+
+#signup.right-image {
+  max-width: 200px;      /* Adjust the size of your image */
+  height: auto;
 }
 
 
 
-#signupButton {
-  width: 20%;
-    margin-left: 40%;
-
-}
+ button#SubSignUp.buttons{
+   font-size: 20px;
+  width: 200px;
+    margin-right: 600%;
+  padding: 12px 35px; /* Adjust the second number (left/right) to make it wider */
+} 
 
 #UserParadise
 {
@@ -404,14 +425,14 @@ body.no-scroll { overflow: hidden; }
     margin-bottom: 2%;
 }
 
-#SignUp
+ #NewAccount /*For "please fill in all fields" pop up*/
 {
-    font-size: 40px;
-    text-align: center;
+    font-size: 30px;
+    text-align: right;
     font-family: 'Ubuntu', sans-serif;
-    color: #FFFAFA;
-    margin: 0 0 2% 0;
-}
+    color: #4a1a12; 
+     margin: 0 0 2% 0; 
+} 
 
 
 #options
@@ -518,14 +539,7 @@ body.no-scroll { overflow: hidden; }
   gap: 10px;           /* Puts a 10px space between the buttons */
 }
 
-#signup{
-font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    /* background-color:#f95959; */
 
-}
 
 
 #loginPassword
@@ -1189,7 +1203,6 @@ select{
   }
 }
 /* ===== END OF SURVEY PAGE ===== */
-<<<<<<< HEAD
 
 
 /* ===== RESPONSIVE LAYOUT ===== */
@@ -1250,5 +1263,3 @@ select{
     border-radius: 10px;
 }
 /* ==== END LOG OUT BUTTON FIX ONLY ON DASHBOARD ==== */
-=======
->>>>>>> 60be9936a1cf09e6ab6337468e0fbd61ee74d138
