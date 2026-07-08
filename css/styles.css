@@ -133,6 +133,7 @@ body.no-scroll { overflow: hidden; }
   padding: 20px;
   border-radius: var(--radius);
   display: flex;
+  flex-direction: column;
   gap: 10px;
   width: min(500px, 90vw);
 }
@@ -163,7 +164,7 @@ body.no-scroll { overflow: hidden; }
 .hero {
   position: relative;
   background: linear-gradient(180deg, var(--green-light) 0%, var(--green-mid) 100%);
-  text-align: left;
+  text-align: center;
   padding: 60px 90px 40px;
   overflow: hidden;
 }
@@ -376,43 +377,22 @@ body.no-scroll { overflow: hidden; }
 }
 
 
-/*#SignupDiv
+#SignupDiv
 {
     font-size: 30px;
     width: 70%;
     margin-left: 15%;
     padding: 25px;
-     background-color:#f95959; 
-} */
-
-
-#signup, { /*used for all buttons in signup window*/
-font-size: 30px;
-    width: 70%;
-    margin-right: 40%;
-    padding: 25px;
-    display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Pushes content to edges */
-  align-items: center;            /* Centers items vertically */
-  width: 100%;
     /* background-color:#f95959; */
-
-}
-
-#signup.right-image {
-  max-width: 200px;      /* Adjust the size of your image */
-  height: auto;
 }
 
 
 
- button#SubSignUp.buttons{
-   font-size: 20px;
-  width: 200px;
-    margin-right: 600%;
-  padding: 12px 35px; /* Adjust the second number (left/right) to make it wider */
-} 
+#signupButton {
+  width: 20%;
+    margin-left: 40%;
+
+}
 
 #UserParadise
 {
@@ -425,14 +405,14 @@ font-size: 30px;
     margin-bottom: 2%;
 }
 
- #NewAccount /*For "please fill in all fields" pop up*/
+#SignUp
 {
-    font-size: 30px;
-    text-align: right;
+    font-size: 40px;
+    text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: #4a1a12; 
-     margin: 0 0 2% 0; 
-} 
+    color: #FFFAFA;
+    margin: 0 0 2% 0;
+}
 
 
 #options
@@ -539,7 +519,14 @@ font-size: 30px;
   gap: 10px;           /* Puts a 10px space between the buttons */
 }
 
+#signup{
+font-size: 30px;
+    width: 70%;
+    margin-left: 15%;
+    padding: 25px;
+    /* background-color:#f95959; */
 
+}
 
 
 #loginPassword
