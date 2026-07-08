@@ -539,7 +539,7 @@ font-size: 30px;
 
 #loginPassword
 {
-        font-size: 30px;
+        font-size: 18px;
 }
 #searchText
 {
@@ -557,7 +557,7 @@ input[type="text"],input[type="password"]{
         height: 40px;
         font-size: 22px;
         padding: 0 15px;
-    margin-left: 10%;
+    margin-left: 1%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
         box-sizing: border-box;
