@@ -114,5 +114,30 @@ body.no-scroll { overflow: hidden; }
 }
 
 
+#loginPassword
+{
+        font-size: 18px;
+}
+#searchText
+{
+        font-size: 30px;
+}
+#colorText
+{
+        font-size: 30px;
+}
+
+input[type="text"],input[type="password"]{
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+        height: 40px;
+        font-size: 22px;
+        padding: 0 15px;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    font-family: 'Ubuntu', sans-serif;
+        box-sizing: border-box;
+}
 
 
