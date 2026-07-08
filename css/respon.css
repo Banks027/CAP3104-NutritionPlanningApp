@@ -1,0 +1,10 @@
+/* ===== RESPONSIVE ===== */
+@media (max-width: 720px) {
+  .hero { padding: 40px 20px 30px; }
+  .hero-decor { display: none; }
+  .steps { gap: 30px; }
+  .testimonials { gap: 24px; }
+  .logo { font-size: 2.2rem; }
+  .categories-tab { display: none; }        /* desktop pull-tab hidden... */
+  .categories-link-mobile { display: inline-block; } /* ...replaced by this nav trigger */
+}

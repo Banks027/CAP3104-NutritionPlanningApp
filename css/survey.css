@@ -1,0 +1,121 @@
+/* ===== SURVEY PAGE ===== */
+.survey-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--green-light) 0%, var(--green-mid) 100%);
+  padding: 50px 20px 100px;
+}
+
+.survey-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.survey-title {
+  font-size: 1.8rem;
+  color: var(--maroon);
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.survey-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin: 0 0 30px;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.survey-section h2 {
+  font-size: 1.05rem;
+  color: var(--maroon);
+  margin: 0 0 14px;
+}
+
+.survey-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.survey-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.survey-option:has(input:checked) {
+  border-color: var(--maroon);
+  background: #f9f0ed;
+}
+
+.survey-option input {
+  cursor: pointer;
+}
+
+.survey-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #c9c1b3;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.survey-textarea:focus {
+  outline: none;
+  border-color: var(--maroon);
+}
+
+.survey-submit,
+.survey-submit-link {
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: background 0.15s ease;
+}
+
+.survey-submit:hover,
+.survey-submit-link:hover {
+  background: var(--maroon-dark);
+}
+
+.survey-result {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .survey-card {
+    padding: 26px 20px;
+  }
+}
+/* ===== END OF SURVEY PAGE ===== */

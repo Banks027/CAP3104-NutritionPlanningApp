@@ -1,0 +1,17 @@
+
+/* ===== CATEGORIES TAB ===== */
+.categories-tab {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  background: var(--cream);
+  border: none;
+  padding: 22px 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius) 0 0 var(--radius);
+  cursor: pointer;
+  color: var(--text-dark);
+}

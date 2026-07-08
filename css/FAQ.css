@@ -1,0 +1,141 @@
+/*Start for FAQ page*/
+.faq-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #000000;
+}
+
+.faq-question {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 18px 40px 18px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+}
+
+.faq-question:hover {
+  color: #ffffff;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  text-align: center;
+}
+
+.faq-answer p {
+  padding-bottom: 18px;
+  margin: 0;
+  color: #120808;
+}
+
+.faq-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f5f0e6;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.header-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.header-link:hover {
+  color: #000;
+}
+
+.header-home {
+  font-size: 1.1rem;
+  justify-self: center;
+}
+
+.faq-header .header-link:first-child {
+  justify-self: start;
+}
+
+.faq-header .header-link:last-child {
+  justify-self: end;
+}
+/*End for FAQ page*/
+
+
+
+
+
+
+
+.faq-item {
+  border-bottom: 1px solid #000000;
+}
+
+.faq-question {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 18px 40px 18px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+}
+
+.faq-question:hover {
+  color: #ffffff;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  text-align: center;
+}
+
+
+
+
+/*End for FAQ page*/

@@ -1,0 +1,30 @@
+
+/* ===== FOOD STRIP ===== */
+.food-strip {
+  height: 160px;
+  background-image: url('https://images.unsplash.com/photo-1563865436874-9aef32095fad?w=1600&h=320&fit=crop&auto=format&q=80');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+
+
+#title
+{
+    display: block;
+    font-size: 40px;
+    width: 100%;
+    margin: 2% auto;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #FFFAFA;
+}
+
+#LoginDiv
+{
+    font-size: 20px;
+    width: 0%;
+    margin-left: 15%;
+    padding: 25px;
+   /* background-color:#f95959; */
+}

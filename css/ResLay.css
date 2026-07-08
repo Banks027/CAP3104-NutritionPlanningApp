@@ -1,0 +1,41 @@
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (min-width: 1024px) {
+    #dashboard .nutrition-card,
+    #dashboard .meal-card,
+    #dashboard .suggestion-card {
+        padding: 20px 24px;
+        font-size: 15px;
+    }
+
+    #dashboard .nutrition-card h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    #dashboard .meal-card .meal-name {
+        font-size: 17px;
+    }
+
+    #dashboard .meal-card .meal-calories {
+        font-size: 15px;
+    }
+
+    #dashboard .quick-add-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #dashboard .quick-add-btn {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    #dashboard .week-days {
+        gap: 12px;
+    }
+
+    #dashboard .week-day {
+        padding: 12px 6px;
+        font-size: 14px;
+    }
+}
+/* ===== END OF RESPONSIVE LAYOUT ===== */

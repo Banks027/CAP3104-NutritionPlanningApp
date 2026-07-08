@@ -1,0 +1,129 @@
+
+/* ===== TOP NAV ===== */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: var(--cream);
+}
+
+.search-link {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.search-link .icon { font-size: 1rem; }
+
+.top-links { display: flex; gap: 24px; align-items: center; }
+.top-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.top-links a:hover { text-decoration: underline; }
+
+.login-box {
+    display: flex;
+    align-items: center;
+}
+
+.login-box form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.login-box input {
+    width: 115px;
+    padding: 6px 8px;
+    border: 1px solid #c9c1b3;
+    border-radius: var(--radius);
+    font-size: 0.82rem;
+}
+
+.login-box button[type="submit"] {
+    padding: 6px 12px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--maroon);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.categories-link-mobile {
+  display: none;
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#loginPassword
+{
+        font-size: 30px;
+}
+
+.options {
+  display: flex;       /* Aligns the buttons horizontally */
+  gap: 10px;           /* Puts a 10px space between the buttons */
+}
+
+
+input[type="text"],input[type="password"]{
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+        height: 40px;
+        font-size: 22px;
+        padding: 0 15px;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    font-family: 'Ubuntu', sans-serif;
+        box-sizing: border-box;
+}
+
+#inner-title{
+    display: inline-block;
+    font-size: 0.8em;
+    width: 90%;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-family: 'Ubuntu', sans-serif;
+    color: #FFFAFA;
+}
+
+#loginResult{
+    display: inline-block;
+    font-size: 0.8em;
+    width: 90%;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-family: 'Ubuntu', sans-serif;
+    color: #95060a;
+}
+
+#userName{
+    /*display: inline-block;*/
+    width: 80%;
+    /*margin-left: 10%;*/
+    text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+    color: #FFFAFA;
+}
