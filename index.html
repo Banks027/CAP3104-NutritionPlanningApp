@@ -45,12 +45,39 @@
   <!-- ===== SEARCH OVERLAY (hidden until toggled) ===== -->
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
     <form class="search-box" id="searchForm">
+      <button type="button" class="close-btn" id="searchClose" aria-label="Close search">&times;</button>
       <label class="sr-only" id="searchLabel" for="searchInput">Search recipes</label>
       <input type="text" id="searchInput" name="q" placeholder="Search recipes, ingredients, cuisines..." autocomplete="off">
       <button type="submit">Search</button>
-      <button type="button" class="close-btn" id="searchClose" aria-label="Close search">&times;</button>
+
     
     
+      <!-- Filters -->
+      <div class="filter-group">
+      <h3>Meal Type</h3>
+     <!-- Vegan | DairyFree | GlutenFree | Garlic | Caffeine | Halal | Kosher | Vegetarian | MealCost -->
+
+        <label><input type="checkbox" name="mealType" value="Vegan"> Vegan</label>
+        <label><input type="checkbox" name="mealType" value="Dairy Free"> Dairy-Free</label>
+        <label><input type="checkbox" name="mealType" value="GlutenFree"> Gluten-Free</label>
+        <label><input type="checkbox" name="mealType" value="Garlic Free"> Garlic</label>
+        <label><input type="checkbox" name="mealType" value="Caffeine Free"> Caffeine</label>
+        <label><input type="checkbox" name="mealType" value="Halal"> Halal</label>
+        <label><input type="checkbox" name="mealType" value="Kosher"> Kosher</label>
+        <label><input type="checkbox" name="mealType" value="Vegetarian"> Vegetarian</label>
+     
+      </div>
+
+      <div class="filter-group">
+        <h3>Budget</h3>
+        <label><input type="checkbox" name="budget" value="5"> Under $5</label>
+        <label><input type="checkbox" name="budget" value="5-10"> $5-$10</label>
+        <label><input type="checkbox" name="budget" value="10plus"> $10 and above</label>
+      </div>
+
+    
+  
+
     
     
     
@@ -112,57 +139,11 @@
           <cite>&mdash; Neuroscience College Student from Arizona</cite>
         </blockquote>
       </div>
-
-      <!-- ===== CATEGORIES TAB (desktop pull tab; hidden on mobile in favor of nav link) ===== -->
-      <button class="categories-tab" id="categoriesToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="categoriesDrawer">Categories</button>
-    </section>
+   </section>
 
     <!-- ===== FOOD STRIP ===== -->
     <div class="food-strip" role="img" aria-label="Assortment of fresh vegetables and fruits"></div>
   </main>
-
-  <!-- ===== CATEGORIES DRAWER ===== -->
-  <aside class="categories-drawer" id="categoriesDrawer" role="dialog" aria-modal="true" aria-labelledby="categoriesHeading">
-    <button class="drawer-close" id="categoriesClose" type="button" aria-label="Close categories">&times;</button>
-    <h2 id="categoriesHeading">Categories</h2>
-
-    <div class="filter-group">
-      <h3>Meal Type</h3>
-     <!-- Vegan | DairyFree | GlutenFree | Garlic | Caffeine | Halal | Kosher | Vegetarian | MealCost -->
-
-      <label><input type="checkbox" name="mealType" value="Vegan"> Vegan</label>
-      <label><input type="checkbox" name="mealType" value="Dairy Free"> Dairy-Free</label>
-      <label><input type="checkbox" name="mealType" value="GlutenFree"> Gluten-Free</label>
-      <label><input type="checkbox" name="mealType" value="Garlic Free"> Garlic</label>
-      <label><input type="checkbox" name="mealType" value="Caffeine Free"> Caffeine</label>
-      <label><input type="checkbox" name="mealType" value="Halal"> Halal</label>
-      <label><input type="checkbox" name="mealType" value="Kosher"> Kosher</label>
-      <label><input type="checkbox" name="mealType" value="Vegetarian"> Vegetarian</label>
-     
-    </div>
-
-    <div class="filter-group">
-      <h3>Budget</h3>
-      <label><input type="checkbox" name="budget" value="15"> Under $15</label>
-      <label><input type="checkbox" name="budget" value="15-30"> $15-30</label>
-      <label><input type="checkbox" name="budget" value="30plus"> $30 and above</label>
-    </div>
-
-    <div class="filter-group">
-      <h3>Ingredient</h3>
-      <div class="ingredient-toggle">
-        <label><input type="radio" name="ingMode" value="include" checked> Include</label>
-        <label><input type="radio" name="ingMode" value="exclude"> Exclude</label>
-      </div>
-      <label><input type="checkbox" name="ingredient" value="apples"> Apples</label>
-      <label><input type="checkbox" name="ingredient" value="blueberries"> Blueberries</label>
-      <label><input type="checkbox" name="ingredient" value="carrots"> Carrots</label>
-      <label><input type="checkbox" name="ingredient" value="eggs"> Eggs</label>
-    </div>
-
-    <button class="apply-filters" id="applyFilters" type="button">Apply Filters</button>
-  </aside>
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
 </body>
 </html>
