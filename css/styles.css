@@ -3,7 +3,7 @@
   --green-mid: #8fce4e;
   --maroon: #4a1a12;
   --maroon-dark: #3a1310;
-  --cream: #f4efe4;
+  --cream: #f4efe4; /**for task bar */
   --text-dark: #2b2b1f;
   --radius: 6px;
 }
@@ -91,33 +91,6 @@ body.no-scroll { overflow: hidden; }
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#ContactBook h1
-{
-    font-size: 40px;
-    width: 70%;
-    margin-right: 15%;
-    padding: 25px;
-    text-align: left;
-    font-family: 'Ubuntu', sans-serif;
-    color: #FFFAFA;
-}
-
-#searchContactDiv h1
-{
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    color: #FFFAFA;
-}
-
-#searchContactDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    /* background-color:#f95959; */
-}
-
 
 
 #accessUIDiv
@@ -140,13 +113,6 @@ body.no-scroll { overflow: hidden; }
     font-family: 'Ubuntu', sans-serif;
 }
 
-.buttons:hover{
-    background-color: #455d7a;
-    color: #FFFFFF;
-    opacity: 50%;
-}
 
-#searchText
-{
-        font-size: 30px;
-}
+
+

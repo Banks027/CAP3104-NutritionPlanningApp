@@ -5,6 +5,11 @@ if (typeof setupConfig === 'function') {
 document.addEventListener('DOMContentLoaded', () => {
 
   const body = document.body;
+  const on = (element, eventName, handler) => {
+    if (element) {
+      element.addEventListener(eventName, handler);
+    }
+  };
 
   /* ---------- Helpers: consistent scroll lock while a panel is open ---------- */
   function lockScroll()   { body.classList.add('no-scroll'); }
@@ -18,25 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput   = document.getElementById('searchInput');
 
   function openSearch() {
+    if (!searchOverlay || !searchToggle || !searchInput) return;
     searchOverlay.classList.add('open');
     searchToggle.setAttribute('aria-expanded', 'true');
     lockScroll();
     searchInput.focus();
   }
   function closeSearch() {
+    if (!searchOverlay || !searchToggle) return;
     searchOverlay.classList.remove('open');
     searchToggle.setAttribute('aria-expanded', 'false');
     unlockScroll();
     searchToggle.focus();
   }
 
-  searchToggle.addEventListener('click', openSearch);
-  searchClose.addEventListener('click', closeSearch);
-  searchOverlay.addEventListener('click', (e) => {
+  on(searchToggle, 'click', openSearch);
+  on(searchClose, 'click', closeSearch);
+  on(searchOverlay, 'click', (e) => {
     if (e.target === searchOverlay) closeSearch();
   });
 
-  searchForm.addEventListener('submit', (e) => {
+  on(searchForm, 'submit', (e) => {
     e.preventDefault();
     const query = (new FormData(searchForm).get('q') || '').trim();
     if (!query) {
@@ -56,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const drawerBackdrop         = document.getElementById('drawerBackdrop');
 
   function openDrawer() {
+    if (!categoriesDrawer || !drawerBackdrop || !categoriesToggle || !categoriesToggleMobile || !categoriesClose) return;
     categoriesDrawer.classList.add('open');
     drawerBackdrop.classList.add('open');
     categoriesToggle.setAttribute('aria-expanded', 'true');
@@ -64,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     categoriesClose.focus();
   }
   function closeDrawer() {
+    if (!categoriesDrawer || !drawerBackdrop || !categoriesToggle || !categoriesToggleMobile) return;
     categoriesDrawer.classList.remove('open');
     drawerBackdrop.classList.remove('open');
     categoriesToggle.setAttribute('aria-expanded', 'false');
@@ -71,10 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
     unlockScroll();
   }
 
-  categoriesToggle.addEventListener('click', openDrawer);
-  categoriesToggleMobile.addEventListener('click', openDrawer);
-  categoriesClose.addEventListener('click', closeDrawer);
-  drawerBackdrop.addEventListener('click', closeDrawer);
+  on(categoriesToggle, 'click', openDrawer);
+  on(categoriesToggleMobile, 'click', openDrawer);
+  on(categoriesClose, 'click', closeDrawer);
+  on(drawerBackdrop, 'click', closeDrawer);
 
   /* ---------- Escape closes whichever panel is open ---------- */
   document.addEventListener('keydown', (e) => {
@@ -84,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- Apply filters ---------- */
-  document.getElementById('applyFilters').addEventListener('click', () => {
+  on(document.getElementById('applyFilters'), 'click', () => {
     const mealTypes  = [...document.querySelectorAll('input[name="mealType"]:checked')].map(el => el.value);
     const budgets     = [...document.querySelectorAll('input[name="budget"]:checked')].map(el => el.value);
     const ingMode     = document.querySelector('input[name="ingMode"]:checked')?.value || 'include';
@@ -100,14 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- Get Started -> onboarding survey (NFR1/NFR2 flow) ---------- */
-  document.getElementById('getStartedBtn').addEventListener('click', () => {
-    // TODO: this page doesn't exist yet. Point at the real onboarding survey once it's built
-    // (NFR2 flow: Budget -> Time available -> Dietary restrictions -> Nutrition goals -> main screen).
-    // Placed flat at repo root to match how SignUp.html/menu.html are referenced elsewhere in auth.js/nav.js.
-    window.location.href = '../html/survey.html';
-  });
-
-    document.getElementById('getStartedBtn').addEventListener('click', () => {
+  on(document.getElementById('getStartedBtn'), 'click', () => {
     // TODO: this page doesn't exist yet. Point at the real onboarding survey once it's built
     // (NFR2 flow: Budget -> Time available -> Dietary restrictions -> Nutrition goals -> main screen).
     // Placed flat at repo root to match how SignUp.html/menu.html are referenced elsewhere in auth.js/nav.js.
