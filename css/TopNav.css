@@ -27,7 +27,7 @@
 
 .search-link {
     display: flex;
-    align-items: center;
+    align-items: right;
     gap: 8px;
     background: none;
     border: none;
@@ -73,8 +73,8 @@
     border: none;
     border-radius: var(--radius);
     padding: 8px 18px;
-    font-weight: 400;
-    cursor: pointer;
+    /* font-weight: 400; */
+     /* cursor: pointer; */
     margin: 0;                 /* REMOVE margin-top */
     transition: background .2s;
 }
