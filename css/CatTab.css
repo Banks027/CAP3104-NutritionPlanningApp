@@ -2,7 +2,7 @@
 /* ===== CATEGORIES TAB ===== */
 .categories-tab {
   position: absolute;
-  right: 0;
+  right: 50;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;

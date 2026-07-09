@@ -2,144 +2,106 @@
 /* ===== TOP NAV ===== */
 :root {
     --maroon: #4a1a12;
+    --maroon-dark: #3a1310;
+    --cream: #f4efe4;
+    --text-dark: #2b2b1f;
     --radius: 6px;
 }
 
+/* ===== TOP NAV ===== */
+
 .topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 28px;
-  background: var(--cream);
+    display: noflex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: var(--cream);
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* Left Side */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .search-link {
-  background: none;
-  border: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
 }
-.search-link .icon { font-size: 1rem; }
 
-.top-links { display: flex; gap: 24px; align-items: center; }
-.top-links a {
-  color: var(--text-dark);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
-.top-links a:hover { text-decoration: underline; }
+
+.top-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.top-links a:hover {
+    color: var(--maroon);
+}
+
+/* Right Side */
 
 .login-box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 470px;       /* reserves space for loginResult */
 }
 
 .login-box form {
     display: flex;
     align-items: center;
-    gap: 6px;
-    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .login-box input {
-    width: 115px;
-    padding: 6px 8px;
+    width: 145px;
+    padding: 8px 10px;
     border: 1px solid #c9c1b3;
     border-radius: var(--radius);
-    font-size: 0.82rem;
+    font-size: .9rem;
+    
 }
 
 .login-box .buttons {
     background: var(--maroon);
-    color: #fff;
+    color: white;
     border: none;
-    padding: 12px 16px;
     border-radius: var(--radius);
-    font-size: 0.95rem;
-    font-weight: 600;
+    padding: 8px 18px;
+    font-weight: 400;
     cursor: pointer;
-    transition: background .15s ease;
+    margin: 0;                 /* REMOVE margin-top */
+    transition: background .2s;
 }
 
 .login-box .buttons:hover {
     background: var(--maroon-dark);
 }
 
-
-
-
-.categories-link-mobile {
-  display: none;
-  background: var(--maroon);
-  color: #fff;
-  border: none;
-  padding: 6px 14px;
-  border-radius: var(--radius);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
+#loginResult {
+    width: 100%;
+    height: 20px;
+    margin-top: 6px;
+    color: #b00020;
+    font-size: .8rem;
+    text-align: right;
 }
-
-
-
-.options {
-  display: flex;       /* Aligns the buttons horizontally */
-  gap: 10px;           /* Puts a 10px space between the buttons */
-}
-
-
-/* input[type="text"],input[type="password"]{
-    border-radius: 10px;
-    text-align: center;
-    width: 40%;
-        height: 40px;
-        font-size: 22px;
-        padding: 0 15px;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-        box-sizing: border-box;
-}*/
-
-
-.login-box .buttons:hover {
-    background: var(--maroon-dark);
-}
-
-
-#inner-title{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-    color: #FFFAFA;
-}
-
-#loginResult{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-    color: #95060a;
-}
-
-/*.login-box .{
-    display: inline-block;
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-    color: #FFFAFA;
-} */
