@@ -24,31 +24,33 @@
 <body>
 
 <!-- ===== TOP NAV ===== -->
-  <header class="topnav">
+<header class="topnav">
+    <div class="nav-content">
 
-    <div class="nav-left">
-        <button class="search-link" id="searchToggle" type="button">
-            <span class="icon">&#128269;</span>
-            Search Recipes
-        </button>
+        <div class="nav-left">
+            <button class="search-link" id="searchToggle" type="button">
+                <span class="icon">&#128269;</span>
+                Search Recipes
+            </button>
 
-        <nav class="top-links">
-            <a href="../index.html">Home</a>
-            <a href="../html/faq.html">FAQ</a>
-            <a href="../html/SignUp.html">Sign Up</a>
-        </nav>
+            <nav class="top-links">
+                <a href="../index.html">Home</a>
+                <a href="../html/faq.html">FAQ</a>
+                <a href="../html/SignUp.html">Sign Up</a>
+            </nav>
+        </div>
+
+        <div class="login-box">
+            <form>
+                <input type="text" id="loginName" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button type="button" class="buttons" onclick="doLogin()">Login</button>
+            </form>
+
+            <span id="loginResult"></span>
+        </div>
+
     </div>
-
-    <div class="login-box">
-        <form>
-            <input type="text" id="loginName" placeholder="Username">
-            <input type="password" id="loginPassword" placeholder="Password">
-            <button type="button" class="buttons" onclick="doLogin()">Login</button>
-        </form>
-
-        <span id="loginResult"></span>
-    </div>
-
 </header>
 
  <!-- ===== SEARCH OVERLAY (hidden until toggled) ===== -->
@@ -84,12 +86,6 @@
         <label><input type="checkbox" name="budget" value="10plus"> $10 and above</label>
       </div>
 
-    
-  
-
-    
-    
-    
     </form>
   </div>
 
