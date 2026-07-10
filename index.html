@@ -6,7 +6,7 @@
 <meta name="description" content="NutriPlan helps you find healthy, nourishing recipes tailored to your budget, diet, and goals. Take a 3-minute survey and get a personalized meal plan.">
 <link rel="icon" href="images/favicon.ico" sizes="any">
 <title>NutriPlan &mdash; Personalized Healthy Recipes</title>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/signup.css">
  <link rel="stylesheet" href="/css/TopNav.css">
  <link rel="stylesheet" href="/css/searchOv.css">
  <link rel="stylesheet" href="/css/hero.css">
@@ -20,31 +20,35 @@
 </head>
 <body>
 
-  <!-- ===== TOP NAV ===== -->
-  <header class="topnav">
-    <button class="search-link" id="searchToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="searchOverlay">
-      <span class="icon" aria-hidden="true">&#128269;</span> Search Recipes
-    </button>
+<!-- ===== TOP NAV ===== -->
+<header class="topnav">
+    <div class="nav-content">
 
-    <nav class="top-links">
-     
-      <a href="/html/faq.html">FAQ</a>
-      
+        <div class="nav-left">
+            <button class="search-link" id="searchToggle" type="button">
+                <span class="icon">&#128269;</span>
+                Search Recipes
+            </button>
 
-      <!-- Hidden Login Box -->
-      <div class="login-box">
-        <form>
-          <input type="text" id="loginName" placeholder="Username" required>
-          <input type="password" id="loginPassword" placeholder="Password" required>
-          <button type="buttons" onclick="doLogin()">Login</button>
-        </form>
-        <span id="loginResult"></span>
-      </div>
+            <nav class="top-links">
+                <a href="../index.html">Home</a>
+                <a href="../html/faq.html">FAQ</a>
+                <a href="../html/SignUp.html">Sign Up</a>
+            </nav>
+        </div>
 
-        <a href="/html/SignUp.html" id="">Sign Up</a>
-      
-    </nav>
-  </header>
+        <div class="login-box">
+            <form>
+                <input type="text" id="loginName" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button type="button" class="buttons" onclick="doLogin()">Login</button>
+            </form>
+
+            <span id="loginResult"></span>
+        </div>
+
+    </div>
+</header>
 
   <!-- ===== SEARCH OVERLAY (hidden until toggled) ===== -->
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
