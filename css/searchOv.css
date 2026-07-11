@@ -47,9 +47,8 @@
     gap: 15px;
     padding: 12px;
     margin-top: 12px;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    background: var(--cream);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 .close-btn {
   position: absolute;
