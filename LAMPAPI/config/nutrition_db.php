@@ -2,8 +2,8 @@
 
 define('NUTRITION_DB_HOST', 'localhost');
 define('NUTRITION_DB_NAME', 'Nutrition');
-define('NUTRITION_DB_USER', 'root');
-define('NUTRITION_DB_PASS', '25523adc7c1e4ff2182cdc2bec359132bfa2e6e9eb373755');
+define('NUTRITION_DB_USER', 'TheBeast');
+define('NUTRITION_DB_PASS', 'WeLoveCAP3104');
 define('NUTRITION_DB_CHARSET', 'utf8mb4');
 
 function getNutritionDB(): PDO
