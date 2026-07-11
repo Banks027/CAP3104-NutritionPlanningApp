@@ -9,14 +9,14 @@
 }
 
 body {
- background-color: #8fce4e;
+    margin: 0;
+    background-color: #8fce4e;
 }
 
 #dashboard {
     max-width: 480px;
     margin: 0 auto;
-    padding: 20px;
-   
+    padding: 20px 16px 96px;
     font-family: 'Ubuntu', sans-serif;
     color: #333;
 }
@@ -25,14 +25,17 @@ body {
 #dashboard #header h1 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 0 0 5px;
 }
 
 #dashboard #header #currentDate {
     /*color: #888;*/
     background: white;
-    font-size: 14px;
-    margin-top: 0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
 }
 
 /* Nutrition cards - only inside dashboard */
@@ -47,7 +50,7 @@ body {
 #dashboard .nutrition-card h2 {
     font-size: 16px;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 0 0 10px;
 }
 
 /* Nutrition stats - only inside dashboard */
@@ -289,7 +292,8 @@ body {
     cursor: pointer;
     color: #888;
     float: right;
-    margin-top: -30px;
+    margin-top: -52.5px;
+    margin-right: 20px;
 }
 
 /* Loading text - only inside dashboard */
@@ -316,7 +320,7 @@ body {
     }
 
 
-
+}
 /* ==== LOG OUT BUTTON FIX ONLY ON DASHBOARD ==== */
 #dashboard .logout-container {
     display: flex;
@@ -331,13 +335,22 @@ body {
     margin: 0;
     font-size: 16px;
     border-radius: 10px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
 }
 
+#dashboard #logoutButton:hover {
+    background: var(#2e7d32); 
+}
 
-#logoutButton{
+/* #logoutButton{
     width: 20%;
     margin-left: 40%;
 }
+*/
+
 /* ==== END LOG OUT BUTTON FIX ONLY ON DASHBOARD ==== */
 
 
@@ -348,3 +361,4 @@ body {
     margin-left: 15%;
  /* background-color:#f95959; */
 }
+
