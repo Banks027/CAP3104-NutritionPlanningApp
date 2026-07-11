@@ -19,6 +19,9 @@
   flex-direction: column;
   gap: 10px;
   width: min(500px, 90vw);
+
+  max-height: 80vh;
+  overflow-y: auto;
 }
 .search-box input {
   align-self: stretch;
