@@ -36,7 +36,10 @@ function getNutritionDB(): PDO
         catch (PDOException $e)
         {
             respond(500, ['error' => 'Nutrition database connection failed']);
+            'details' => $e->getMessage()
         }
+
+
     }
 
     return $pdo;
