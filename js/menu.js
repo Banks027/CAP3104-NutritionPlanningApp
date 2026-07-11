@@ -193,7 +193,8 @@ function getSuggestionEmoji(name) {
 
 // DASHBOARD NAVIGATION
 function goToHomeDashboard() {
-    loadDashboardData();
+    window.location.href = "../index.html";
+
 }
 function goToPlan() {
     alert('📋 Plan page coming soon!');
@@ -202,7 +203,7 @@ function goToRecipes() {
     alert('📖 Recipes page coming soon!');
 }
 function goToProfile() {
-    alert('👤 Profile page coming soon!');
+    window.location.href = "menu.html";
 }
 
 // QUICK ADD
