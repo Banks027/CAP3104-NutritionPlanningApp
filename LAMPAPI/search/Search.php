@@ -1,6 +1,11 @@
 <?php
+file_put_contents(
+    "/tmp/search_debug.txt",
+    "Search.php loaded\n",
+    FILE_APPEND
+);
 
-require_once '../config/db.php';
+require_once '../config/nutrition_db.php';
 require_once '../config/helpers.php';
 
 setCORSHeaders();
@@ -16,7 +21,7 @@ $mealTypes = $body['mealTypes'] ?? [];
 $budgets = $body['budget'] ?? [];
 
 try {
-    $db = getDB();
+    $db = getNutritionDB();
 
     $sql = "
         SELECT FoodName, Image, MealCost
