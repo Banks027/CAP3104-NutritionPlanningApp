@@ -1,9 +1,4 @@
 <?php
-file_put_contents(
-    "/tmp/search_debug.txt",
-    "Search.php loaded\n",
-    FILE_APPEND
-);
 
 require_once '../config/nutrition_db.php';
 require_once '../config/helpers.php';
