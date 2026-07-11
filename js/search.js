@@ -70,7 +70,7 @@ function displayResults(results)
     {
         container.innerHTML += `
             <div class="search-result">
-                <img src="${food.Image}" alt="${food.FoodName}">
+            <img class="food-image" src="${food.Image}" alt="${food.FoodName}">
                 <div class="food-info">
                     <h3>${food.FoodName}</h3>
                     <p>$${food.MealCost}</p>

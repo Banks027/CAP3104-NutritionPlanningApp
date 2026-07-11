@@ -49,3 +49,9 @@
   color: var(--text-dark);
   padding: 0;
 }
+.food-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
