@@ -324,13 +324,13 @@ body {
 
 /* Refresh button - only inside dashboard */
 #dashboard #refreshBtn {
-    background: none;
-    border: 1px solid #ddd;
+    background: white;
+    border: 1px solid #000000;
     border-radius: 20px;
     padding: 4px 12px;
     font-size: 12px;
     cursor: pointer;
-    color: #888;
+    color: #000000;
     float: right;
     margin-top: -52.5px;
     margin-right: 20px;
@@ -385,8 +385,8 @@ body {
     font-size: 16px;
     border-radius: 10px;
     border: none;
-    background: #4CAF50;
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
