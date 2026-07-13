@@ -3,7 +3,7 @@ setupConfig();
 // Simply navigating the page
 
 /* ================================================================
-   🆕 NUTRITION DASHBOARD FUNCTIONS (ADDED FOR menu.html)
+   NUTRITION DASHBOARD FUNCTIONS (ADDED FOR menu.html)
    ================================================================ */
 
 // DATE DISPLAY
