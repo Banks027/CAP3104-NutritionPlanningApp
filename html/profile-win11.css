@@ -1,0 +1,235 @@
+/* ================================================================
+   WINDOWS 11 / FLUENT DESIGN STYLE — profile.html ONLY
+   Deliberately scoped to this page; does not touch the green
+   NutriPlan branding used elsewhere (menu.html / UserDash.css).
+   ================================================================ */
+
+:root {
+  --win-bg: #f3f3f3;
+  --win-card: #ffffff;
+  --win-card-nested: #fbfbfb;
+  --win-border: #e5e5e5;
+  --win-text: #1b1b1b;
+  --win-text-secondary: #4d4d4d;
+  --win-accent: #0067c0;
+  --win-accent-hover: #005a9e;
+  --win-radius-lg: 8px;
+  --win-radius-sm: 4px;
+  --win-font: 'Segoe UI Variable Text', 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #b9e26a 0%, #8fce4e 100%);
+  color: var(--win-text);
+  font-family: var(--win-font);
+}
+
+#win11-page {
+  min-height: 100vh;
+}
+
+/* ===== TOP APP BAR ===== */
+.win11-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  row-gap: 10px;
+  background: var(--win-card);
+  border-bottom: 1px solid var(--win-border);
+  padding: 12px 24px;
+}
+
+.win11-app-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--win-text);
+}
+
+.win11-date {
+  margin: 0;
+  font-size: 13px;
+  color: var(--win-text-secondary);
+}
+
+.win11-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  row-gap: 8px;
+  margin-left: auto;
+}
+
+.win11-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--win-radius-sm);
+  padding: 8px 12px;
+  font-family: var(--win-font);
+  font-size: 13px;
+  color: var(--win-text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.win11-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.win11-nav-btn--active {
+  background: rgba(0, 103, 192, 0.08);
+  border-color: rgba(0, 103, 192, 0.25);
+  color: var(--win-accent);
+  font-weight: 600;
+}
+
+.win11-nav-icon {
+  font-size: 14px;
+}
+
+/* ===== CONTENT ===== */
+.win11-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.win11-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--win-text);
+}
+
+.win11-breadcrumb {
+  margin: 0 0 24px;
+  font-size: 13px;
+  color: var(--win-text-secondary);
+}
+
+/* ===== HERO CARD ===== */
+.win11-hero-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--win-card);
+  border: 1px solid var(--win-border);
+  border-radius: var(--win-radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.win11-avatar {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--win-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.win11-hero-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--win-text);
+}
+
+.win11-hero-sub {
+  font-size: 13px;
+  color: var(--win-text-secondary);
+  margin-top: 2px;
+}
+
+/* ===== LIST CARDS ===== */
+.win11-list-card {
+  background: var(--win-card);
+  border: 1px solid var(--win-border);
+  border-radius: var(--win-radius-lg);
+  margin-bottom: 16px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.win11-list-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: var(--win-font);
+  text-align: left;
+  cursor: default;
+}
+
+button.win11-row-clickable {
+  cursor: pointer;
+}
+
+button.win11-row-clickable:hover {
+  background: rgba(0, 0, 0, 0.035);
+}
+
+.win11-row-icon {
+  flex: 0 0 auto;
+  font-size: 17px;
+  width: 22px;
+  text-align: center;
+}
+
+.win11-row-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.win11-row-label {
+  font-size: 14px;
+  color: var(--win-text);
+}
+
+.win11-row-desc {
+  font-size: 12px;
+  color: var(--win-text-secondary);
+  margin-top: 2px;
+}
+
+.win11-row-value {
+  flex: 0 0 auto;
+  font-size: 14px;
+  color: var(--win-text-secondary);
+}
+
+.win11-chevron {
+  flex: 0 0 auto;
+  font-size: 18px;
+  color: var(--win-text-secondary);
+}
+
+.win11-divider {
+  height: 1px;
+  background: var(--win-border);
+  margin: 0 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .win11-topbar { padding: 12px 16px; }
+  .win11-nav { margin-left: 0; width: 100%; }
+  .win11-content { padding: 20px 14px 40px; }
+  .win11-hero-card { padding: 18px; gap: 14px; }
+  .win11-avatar { width: 56px; height: 56px; font-size: 19px; }
+  .win11-title { font-size: 22px; }
+}
